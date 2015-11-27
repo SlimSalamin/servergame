@@ -17,7 +17,9 @@ public class SignUpServlet {
 
     private AccountService accountService;
 
-    public SignUpServlet(AccountService accountService) { this.accountService}
+    public SignUpServlet(AccountService accountService) { 
+        //this.accountService; 
+    }
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException, IOException {
@@ -31,12 +33,12 @@ public class SignUpServlet {
             pageVariables.put("SignUpStatus", "User with name: "+name+" is not found");
         }
 
-        response.getWriter().println(PageGenerator.getPage("signupstatus.html"));
-        response.setStatus(HttpServletResponse.SC_OK);s
+        response.getWriter().println(/*PageGenerator.getPage("signupstatus.html")*/"2");
+        response.setStatus(HttpServletResponse.SC_OK);
 
     }
     public void doPost(HttpServletRequest request,
-                       HttpServletResponse response) throws ServletException, IOException {
+         HttpServletResponse response) throws ServletException, IOException {
 
     }
 }

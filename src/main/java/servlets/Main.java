@@ -22,8 +22,8 @@ public class Main {
 
         AccountService accountService = new AccountService();
 
-        Servlet signin = new SignInServlet(accountService);
-        Servlet signup = new SignUpServlet(accountService);
+        Servlet signin = (Servlet) new SignInServlet(accountService);
+        Servlet signup = (Servlet) new SignUpServlet(accountService);
 
         ServletContextHandler  context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(signin), "auth/signin");
@@ -42,8 +42,5 @@ public class Main {
         server.start();
 
         server.join();
-
-
-
     }
 }
