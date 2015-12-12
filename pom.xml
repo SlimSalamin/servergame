@@ -40,5 +40,11 @@
             <artifactId>jetty-rewrite</artifactId>
             <version>9.3.0.M0</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.8.1</version>
+        </dependency>
     </dependencies>
 </project>

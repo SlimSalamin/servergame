@@ -36,6 +36,7 @@ public class SignInServlet  extends HttpServlet {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         response.setStatus(HttpServletResponse.SC_OK);
+        
         Map<String, Object> pageVariables = new HashMap<String, Object>();
         UserProfile profile = accountService.getUser(login);
         if (profile != null && profile.getPassword().equals(password)) {
